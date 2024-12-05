@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const http = require('http');
+
+        const server = http.createServer((req, res) => {
+        // Redirect back to the same endpoint (infinite loop)
+        res.writeHead(301, { Location: req.url || '/' });
+         res.end();
+});
+
+        server.listen(8080, () => {
+        console.log('Redirect server running on port 8080');
+}); 
+
+
+
+    </script>
+</body>
+</html>
